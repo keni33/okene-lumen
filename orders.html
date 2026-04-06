@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders - Okene Lumen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="orders.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="okene3.png" alt="Okene Lumen Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="cart-icon">
+      <img src="okene10.png" alt="Shopping Cart">
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="orders-header">
+    <div>
+      <h1 id="orders-greeting">My Orders</h1>
+      <p id="orders-subtext">Track all your requests and purchases</p>
+    </div>
+    <div class="header-actions">
+      <a href="index.html#products" class="btn">+ New Order</a>
+      <button class="btn btn-outline" id="logout-btn">Log Out</button>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <button class="tab active" data-tab="all-orders">All Orders</button>
+    <button class="tab" data-tab="pending-orders">Pending</button>
+    <button class="tab" data-tab="approved-orders">Approved</button>
+    <button class="tab" data-tab="declined-orders">Declined</button>
+  </div>
+
+  <!-- USER INFO CARD -->
+  <div class="user-info-bar">
+    <div class="user-info-item">
+      <span class="info-label">Name</span>
+      <span class="info-value" id="user-name-display">—</span>
+    </div>
+    <div class="user-info-item">
+      <span class="info-label">Email</span>
+      <span class="info-value" id="user-email-display">—</span>
+    </div>
+    <div class="user-info-item">
+      <span class="info-label">Phone</span>
+      <span class="info-value" id="user-phone-display">—</span>
+    </div>
+    <div class="user-info-item">
+      <span class="info-label">Delivery Address</span>
+      <span class="info-value" id="user-address-display">—</span>
+    </div>
+  </div>
+
+  <!-- ORDERS CONTENT -->
+  <div class="orders-page-content">
+
+    <div class="orders-tab-content active" id="all-orders">
+      <div class="orders-grid" id="all-orders-grid"></div>
+    </div>
+
+    <div class="orders-tab-content" id="pending-orders">
+      <div class="orders-grid" id="pending-orders-grid"></div>
+    </div>
+
+    <div class="orders-tab-content" id="approved-orders">
+      <div class="orders-grid" id="approved-orders-grid"></div>
+    </div>
+
+    <div class="orders-tab-content" id="declined-orders">
+      <div class="orders-grid" id="declined-orders-grid"></div>
+    </div>
+
+  </div>
+<script src="products.js"></script>
+<script src="navbar.js"></script>
+<script src="orders.js"></script>
+</body>
+</html>

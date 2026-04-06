@@ -1,0 +1,239 @@
+/* reset and base*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body{
+    font-family: Georgia, serif;
+    background-color: #f9f5ef;
+    color: #2d2d2d;
+}
+.navbar{
+       display: flex;
+       justify-content:space-between;
+       align-items: center;
+       padding: 16px 40px;
+       background-color: #2e5e2e;
+       color: white;
+}
+.logo{
+    font-size: 24px; ;
+    font-weight: bold;
+}
+/* Logo image size */
+.logo img {
+  height: 48px;
+  width: auto;
+}
+/* Cart icon image size */
+.cart-icon img {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+}
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 16px;
+}
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 4px;
+}
+/* This creates the underline element */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover{
+          text-decoration: underline;
+}
+/* On hover, slide the underline to full width */
+.nav-links a:hover::after {
+  width: 100%;
+}
+/*hero section*/
+.hero {
+  position: relative;
+  text-align: center;
+  height: 500px;
+  overflow: hidden;
+}
+.hero h1{
+      font-size: 48px;
+      margin-bottom: 12px;
+}
+.hero p{
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: #555;
+}
+/* Hero image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Dark overlay on top of image */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.hero-overlay h1 {
+  color: white;
+  font-size: 48px;
+}
+.hero-overlay p {
+  color: #e0e0e0;
+  font-size: 18px;
+}
+/*button*/
+.btn{
+    background-color: #2e5e2e;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.add-to-cart {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+  width: 100%;
+}
+.btn:hover{
+     background-color: #1e3e1e;
+}
+/*prroducts section*/
+.products{
+    padding: 60px 40px;
+    text-align:center;
+}
+.products h2{
+        font-size: 32px;
+        margin-bottom: 32px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-image {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+/* Product image size fix */
+.product-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Product info text block */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.category {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e5e2e;
+  margin-bottom: 10px;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.out-of-stock {
+  opacity: 0.6;
+}
+
+.out-of-stock-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.product-image {
+  position: relative;
+}
+
+.add-to-cart:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.card-wrapper {
+  display: contents;
+}

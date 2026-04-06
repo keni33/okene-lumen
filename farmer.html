@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard - Okene Lumen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="farmer.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="okene3.png" alt="Okene Lumen Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="cart-icon">
+      <img src="okene10.png" alt="Shopping Cart">
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD HEADER -->
+  <div class="dashboard-header">
+    <div>
+      <h1>🌾 Farmer Dashboard</h1>
+      <p>Manage your products, stock and incoming orders</p>
+    </div>
+    <button class="btn" id="open-add-modal">+ Add New Product</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <button class="tab active" data-tab="products-tab">My Products</button>
+    <button class="tab" data-tab="orders-tab">Incoming Requests</button>
+  </div>
+
+  <!-- PRODUCTS TAB -->
+  <div class="tab-content active" id="products-tab">
+    <div class="farmer-product-grid" id="farmer-product-grid">
+      <!-- filled by farmer.js -->
+    </div>
+  </div>
+
+  <!-- ORDERS TAB -->
+  <div class="tab-content" id="orders-tab">
+    <div class="orders-list" id="orders-list">
+      <!-- filled by farmer.js -->
+    </div>
+  </div>
+
+  <!-- ADD / EDIT PRODUCT MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Add New Product</h2>
+        <button class="close-modal" id="close-modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" id="form-name" placeholder="e.g. Tomatoes">
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select id="form-category">
+            <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Grains">Grains</option>
+            <option value="Legumes">Legumes</option>
+            <option value="Tubers">Tubers</option>
+            <option value="Natural">Natural</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Price (₦)</label>
+          <input type="number" id="form-price" placeholder="e.g. 8000">
+        </div>
+
+        <div class="form-group">
+          <label>Unit</label>
+          <select id="form-unit">
+            <option value="kg">kg</option>
+            <option value="litre">litre</option>
+            <option value="bunch">bunch</option>
+            <option value="crate">crate</option>
+            <option value="tuber">tuber</option>
+            <option value="bulb">bulb</option>
+            <option value="jar">jar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Stock Available</label>
+          <input type="number" id="form-stock" placeholder="e.g. 50">
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="form-description" rows="3" 
+            placeholder="Describe your product..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Image filename</label>
+          <input type="text" id="form-image" placeholder="e.g. okene2.png">
+        </div>
+
+        <p class="form-error" id="form-error"></p>
+
+        <div class="modal-actions">
+          <button class="btn" id="save-product-btn">Save Product</button>
+          <button class="btn btn-outline" id="cancel-modal-btn">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ <script src="products.js"></script>
+<script src="navbar.js"></script>
+<script src="farmer.js"></script>
+</body>
+</html>

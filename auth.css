@@ -1,0 +1,106 @@
+/* AUTH PAGE */
+.auth-page {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f0f7ee;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  color: #2e5e2e;
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* PASSWORD FIELD */
+.password-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.password-wrapper input:focus {
+  border-color: #2e5e2e;
+}
+
+.toggle-password {
+  background: none;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-password:hover {
+  border-color: #2e5e2e;
+}
+
+/* ERROR */
+.auth-error {
+  color: red;
+  font-size: 13px;
+  min-height: 18px;
+  text-align: center;
+}
+
+/* AUTH BUTTON */
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* SWITCH LINK */
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-switch a {
+  color: #2e5e2e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}

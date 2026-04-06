@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Okene Lumen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="okene3.png" alt="Okene Lumen Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="cart-icon">
+      <img src="okene10.png" alt="Shopping Cart">
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- SIGNUP FORM -->
+  <div class="auth-page">
+    <div class="auth-card">
+
+      <div class="auth-header">
+        <h1>Create Account</h1>
+        <p>Join Okene Lumen and start shopping fresh farm produce</p>
+      </div>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="signup-name" placeholder="e.g. Amina Bello">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="signup-email" placeholder="e.g. amina@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="signup-phone" placeholder="e.g. 08012345678">
+      </div>
+
+      <div class="form-group">
+        <label>Delivery Address</label>
+        <textarea id="signup-address" rows="2" 
+          placeholder="e.g. 12 Market Road, Okene, Kogi State"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="signup-password" placeholder="Min. 6 characters">
+          <button class="toggle-password" data-target="signup-password">👁</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="signup-confirm" placeholder="Repeat your password">
+          <button class="toggle-password" data-target="signup-confirm">👁</button>
+        </div>
+      </div>
+
+      <p class="auth-error" id="signup-error"></p>
+
+      <button class="btn auth-btn" id="signup-btn">Create Account</button>
+
+      <p class="auth-switch">
+        Already have an account? <a href="login.html">Log in here</a>
+      </p>
+
+    </div>
+  </div>
+<script src="navbar.js"></script>
+<script src="auth.js"></script>
+  
+</body>
+</html>
