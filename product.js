@@ -132,7 +132,7 @@ document.getElementById("send-request-btn").addEventListener("click", function()
 
   // ════════════════════════════════════
   // 👇 PUT THE FARMER'S WHATSAPP NUMBER HERE
-  const farmerPhone = "2348023452470";
+  const farmerPhone = "2347019959208";
   // ════════════════════════════════════
 
   const message =
